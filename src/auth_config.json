@@ -1,0 +1,5 @@
+{
+  "domain": "stavvy-test.auth0.com",
+  "clientId": "HHQhczYgT0BvP6EYZKbBrRDGp57bLpcG",
+  "audience": "http://localhost:3001"
+}
