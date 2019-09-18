@@ -7,7 +7,7 @@ const app = express();
 
 // Set up Auth0 configuration
 const authConfig = {
-  domain: "stavvy-test.auth0.com",
+  domain: "dev-stavvy.auth0.com",
   audience: "http://localhost:3001"
 };
 
@@ -29,7 +29,7 @@ const checkJwt = jwt({
 // Define an endpoint that must be called with an access token
 app.get("/api/external", checkJwt, (req, res) => {
   res.send({
-    msg: `Your Access Token was successfully validated! ${req.header('Authorization')}`
+    msg: `Your Access Token was successfully validated! ${req.header('Authorization')} ** ${JSON.stringify(req.user)}`
   });
 });
 
